@@ -45,8 +45,8 @@ def insere(t,j):
         insere(t,j-1)
 l=tri_insertion([44,75,59])
 print(l)
-
 exemple:Imaginons qu'on a une main de cartes qu'on souhaite trier. On a déjà une main partiellement triée, et on souhaite insérer une nouvelle carte à sa place appropriée tout en maintenant la séquence triée. 
+
 #tri rapide
 def partiton(t,d,f):
     pivot=t[f-1]
