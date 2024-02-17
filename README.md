@@ -14,6 +14,10 @@ def tri_abulle(l):                                           ![image](https://gi
 l=tri_abulle([44,75,59])
 print(l)
 
+exemple:un tableau représentant les scores de différents élèves dans une classe, et on souhaite les trier par ordre croissant pour identifier le meilleur élève.Le meilleur élève (avec le score le plus élevé) est maintenant à la dernière position du tableau.
+
+
+
 #tri par insertion
 def tri_inser(l):                                                      ![image](https://github.com/potatopG/les-tris-pour-robbena-/assets/153428390/d2f9b036-98b7-43a2-bd7e-1e72619e6a29)
 
@@ -41,6 +45,8 @@ def insere(t,j):
         insere(t,j-1)
 l=tri_insertion([44,75,59])
 print(l)
+
+exemple:Imaginons qu'on a une main de cartes qu'on souhaite trier. On a déjà une main partiellement triée, et on souhaite insérer une nouvelle carte à sa place appropriée tout en maintenant la séquence triée. 
 #tri rapide
 def partiton(t,d,f):
     pivot=t[f-1]
