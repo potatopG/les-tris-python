@@ -13,9 +13,8 @@ def tri_abulle(l):                                           ![image](https://gi
 
 l=tri_abulle([44,75,59])
 print(l)
-
-exemple:un tableau représentant les scores de différents élèves dans une classe, et on souhaite les trier par ordre croissant pour identifier le meilleur élève.Le meilleur élève (avec le score le plus élevé) est maintenant à la dernière position du tableau.
-
+Complexité:
+Meilleur/Moyenne/Pire cas=O(n^2):La complexité est quadratique, ce qui signifie qu'elle est proportionnelle au carré de la taille de l'ensemble de données  
 
 
 #tri par insertion
@@ -45,7 +44,10 @@ def insere(t,j):
         insere(t,j-1)
 l=tri_insertion([44,75,59])
 print(l)
-exemple:Imaginons qu'on a une main de cartes qu'on souhaite trier. On a déjà une main partiellement triée, et on souhaite insérer une nouvelle carte à sa place appropriée tout en maintenant la séquence triée. 
+Complexité:
+Meilleur /Moyenne cas=O(n): très efficace
+Pire cas=O(n^2) : Cela signifie que le temps d'exécution peut croître de manière quadratique par rapport à la taille de l'ensemble de données
+
 
 #tri rapide
 def partiton(t,d,f):
@@ -64,3 +66,18 @@ def tri_rapide(t, d, f):
         tri_rapide(t, d, pivot)
         tri_rapide(t, pivot + 1, f)
     return t
+
+
+Complexité:
+Meilleur /Moyenne cas=O(n log n):L'orsqu'on divise equitablement le tableau
+Pire cas =O(n^2):le tableau est déjà presque trié et le choix du pivot n'est pas optimal
+
+Complexité :(Selection)
+Meilleur/Moyenne/Pire cas=O(n^2)
+
+Complexité (heapsort):
+Meilleur /Moyenne/Pire cas= O(n log n)
+
+Complexité (Fusion):
+Meilleur /Moyenne/Pire cas= O(n log n):La division et la fusion  des deux tablaeaux sont effectuées de manière équilibrée,ce qui donne une complexité temporelle stable
+
