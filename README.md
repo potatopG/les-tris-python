@@ -1,20 +1,22 @@
 # les-tris-pour-robbena-
 # tri a bulle:
-def tri_abulle(l):
-    verif=True
+def tri_abulle(l):                                           ![image](https://github.com/potatopG/les-tris-pour-robbena-/assets/153428390/cc020992-3e92-48de-a129-e075fbeecc53)
+  
+    verif=True                                                   
     while verif:
         verif=False
         for k in range(1,len(l)):
             if l[k]<l[k-1]:
                 l[k], l[k - 1] = l[k - 1], l[k]
-                verif =False
+                verif =False                                                 
     return l
 
 l=tri_abulle([44,75,59])
 print(l)
 
 #tri par insertion
-def tri_inser(l):
+def tri_inser(l):                                                      ![image](https://github.com/potatopG/les-tris-pour-robbena-/assets/153428390/d2f9b036-98b7-43a2-bd7e-1e72619e6a29)
+
     for k in range(1,len(l)):
         cle=l[k]
         i=k
@@ -26,7 +28,8 @@ def tri_inser(l):
 l=tri_inser([44,75,59])
 print(l)
 #tri par insertion (recurssivite)
-def tri_insertion(t,j=1):
+def tri_insertion(t,j=1):                                          ![image](https://github.com/potatopG/les-tris-pour-robbena-/assets/153428390/2f9265ee-aa64-46fa-9a45-bf5b7e13352a)
+
     if j<len(t):
         insere(t,j)
         tri_insertion(t,j+1)
@@ -45,7 +48,8 @@ def partiton(t,d,f):
     for i in range (d,f-1):
         if t[i]<pivot:
             t[i],t[k]=t[k],t[i]
-            k+=1
+            k+=1                                       ![image](https://github.com/potatopG/les-tris-pour-robbena-/assets/153428390/c5e606d8-a92d-4725-8b40-8609500ab281)
+ 
         t[f-1],t[k]=t[k],t[f-1]
     return k
 def tri_rapide(t, d, f):
