@@ -13,9 +13,10 @@ def tri_abulle(l):                                           ![image](https://gi
 
 l=tri_abulle([44,75,59])
 print(l)
+
+
 Complexité:
 Meilleur/Moyenne/Pire cas=O(n^2):La complexité est quadratique, ce qui signifie qu'elle est proportionnelle au carré de la taille de l'ensemble de données  
-
 
 #tri par insertion
 def tri_inser(l):                                                      ![image](https://github.com/potatopG/les-tris-pour-robbena-/assets/153428390/d2f9b036-98b7-43a2-bd7e-1e72619e6a29)
@@ -44,6 +45,9 @@ def insere(t,j):
         insere(t,j-1)
 l=tri_insertion([44,75,59])
 print(l)
+
+
+
 Complexité:
 Meilleur /Moyenne cas=O(n): très efficace
 Pire cas=O(n^2) : Cela signifie que le temps d'exécution peut croître de manière quadratique par rapport à la taille de l'ensemble de données
@@ -81,3 +85,5 @@ Meilleur /Moyenne/Pire cas= O(n log n)
 Complexité (Fusion):
 Meilleur /Moyenne/Pire cas= O(n log n):La division et la fusion  des deux tablaeaux sont effectuées de manière équilibrée,ce qui donne une complexité temporelle stable
 
+Complexité (Recherche dichotomie ):
+Meilleur /Moyenne/Pire cas= O(n log n)
