@@ -1,4 +1,4 @@
-def tri_rapide(l):
+def tri_rapide1(l):
     if len(l)<=1:
         return l
     else:
@@ -10,7 +10,7 @@ def tri_rapide(l):
             else:
                 l2.append(l[i])
         return tri_rapide(l1)+[l[-1]]+tri_rapide(l2)
-
+#methode 2
 def partition(T,debut,fin): 
 #debut=c’est l’indice de départ de la liste T sur laquelle la fonction va travailler
 #fin=  c’est l’indice qui indique l'élément final de la liste T 
@@ -22,7 +22,7 @@ def partition(T,debut,fin):
             k += 1
             T[fin -1],T[k] = T[k],T[fin -1]
      return k
-def tri_rapide(t, d, f):
+def tri_rapide2(t, d, f):
     if d < f:
         pivot = partition(t, d, f)
         tri_rapide(t, d, pivot)
