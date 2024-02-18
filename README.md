@@ -1,4 +1,4 @@
-# les-tris-pour-robbena-
+# les-tris-python-
 # tri a bulle:
 def tri_abulle(l):                                           ![image](https://github.com/potatopG/les-tris-pour-robbena-/assets/153428390/cc020992-3e92-48de-a129-e075fbeecc53)
   
