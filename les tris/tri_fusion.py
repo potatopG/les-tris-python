@@ -7,7 +7,7 @@ def fusion(left, right):#fusionne deux listes triées
         return [left[0]] + fusion(left[1:], right)#on renvoie le premier élément de left et on fusionne le reste de left avec right
     return [right[0]] + fusion(left, right[1:])# sinon on renvoie le premier élément de right et on fusionne le reste de right avec left
 
-def tri_fusion(l):#CE PROGRAMME EST JUSTE LE PROGRAMME QUI ORGANISE ET L4AUTRE QUI TRI ET FUSIONNE 
+def tri_fusion(l):#programme de tri 
     if len(l) <= 1:
         return l
     else:#on coupe la liste en deux
