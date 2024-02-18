@@ -9,5 +9,15 @@ def tri_bubu(l):
 
     
 
-l=[3,5,7,4,2,6,1] 
-print(tri_bubu(l))
+#deuxieme methode
+
+def tri_bulle(l):
+    verif=True                                                   
+    while verif:
+        verif=False
+        for k in range(1,len(l)):
+            if l[k]<l[k-1]:
+                l[k], l[k - 1] = l[k - 1], l[k]
+                verif =True                                                 
+    return l
+
