@@ -16,11 +16,8 @@ def tri_select_rec(l):
     for i in range(1,len(l)):
         if l[i]<l[1]:
             mini = i 
-    l[i],l[mini] = l[mini], l[i]
+    l[i],l[mini] = l[mini], l[i]#on echange l'element i avec l'element mini
     j=l[i]
     k.append(j)    
-    tri_select_rec(l[1::])
+    tri_select_rec(l[1::])#on fait appel a la fonction avec une liste sans le rang minimum
     return k
-l=[146,354,22,35,36]
-print(tri_select_rec(l))
-print(tri_selection(l))
