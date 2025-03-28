@@ -1,0 +1,47 @@
+ul {
+  margin: 0;
+  padding: 0;
+  border: 300px solid;
+}
+
+ul h3 {
+  display: block;
+  margin: 0;
+  padding: 10px;
+  height: 19px;
+  border: 1px solid #F0F0F0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 80%;
+  color: black;
+  background-color: #B9CDE1;
+}
+
+ul h3:hover {
+  cursor: pointer;
+  color: white;
+  background-color: #7DA5CD;
+}
+
+li {
+  display: block;
+  margin: 0;
+  padding: 0;
+  height: 30px;
+  width: 300px;
+  background-color: #D7E6F5;
+  overflow: hidden;
+  list-style: none;
+  border-radius: 7px;
+  transition: height 0.3s ease-in-out;
+}
+
+li:hover {
+  height: 150px;
+}
+
+li div {
+  margin: 0;
+  padding: 10px;
+  height: 150px;
+  overflow: auto;
+}

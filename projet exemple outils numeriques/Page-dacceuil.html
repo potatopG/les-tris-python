@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Luxe </title>
+    <style>
+        
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 7em;
+    scroll-behavior: smooth;
+}
+body {
+    position: relative;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 8%;
+    height: 50px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+}
+header .logo {
+    color: #ea1f33;
+    font-size: 25px;
+    font-weight: bold;
+}
+header .logo span {
+    color: #000;
+}
+.menu {
+    display: flex;
+}
+.menu li {
+    list-style: none;
+    margin: 0 15px;
+}
+.menu li a {
+    font-size: 14px;
+    color: #000;
+    font-weight: 300;
+    transition: 0.2s;
+}
+.menu li a:hover {
+    color: #ea1f33;
+}
+header button {
+    background-color: #ea1f33;
+    cursor: pointer;
+    color: #fff;
+    padding: 5px 25px;
+}
+#home {
+    margin-top: 50px;
+    height: calc(100vh - 50px);
+    padding: 0 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+/*Scrollbar CSS*/
+
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #ea1f33;
+}
+
+#home .left {
+    width: 40%;
+}
+#home .left h1 {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+#home .left h1 span {
+    color: #ea1f33;
+}
+#home .left p {
+    margin-bottom: 30px;
+    color: #999;
+    font-size: 13px;
+}
+#home .left a {
+    background-color: #ea1f33;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #fff;
+    transition: 0.5s;
+}
+#home .left a:hover {
+    background-color: #000;
+}
+#home .right {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#home .right img {
+    width: 100%;
+}
+#cars {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.section_title {
+    text-transform: uppercase;
+    position: relative;
+    font-size: 25px;
+}
+.section_title:before {
+    position: absolute;
+    left: 10px;
+    bottom: 0;
+    content: "";
+    background-color: #ea1f33;
+    width: 100%;
+    height: 5px;
+    border-radius: 6px;
+}
+.section_title:after {
+    position: absolute;
+    top: 0;
+    left: -10px;
+    content: "";
+    background-color: #ea1f33;
+    width: 100%;
+    height: 5px;
+    border-radius: 6px;
+}
+.images {
+    margin: 100px auto;
+    padding: 0 8%;
+}
+.images ul {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.images li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2.665%;
+    transition: 0.5s;
+    height: 300px;
+    width: 28%;
+}
+
+.images li div {
+    width: 100%;
+    height: 60%;
+    margin-bottom: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+.images li div img {
+    height: 100%;
+    width: 100%;
+}
+
+.images li:hover {
+    transform: scale(1.1);
+    margin: 20px;
+}
+.images li span {
+    color: #000;
+    font-size: 18px;
+}
+#cars li span.prix {
+   color: #ea1f33;
+   font-weight: bold;
+   margin-bottom: 10px;
+}
+#cars li a {
+    background-color: #ea1f33;
+    color: #fff;
+    padding: 5px 20px;
+    font-size: 15px;
+}
+#services {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+}
+.list_services {
+    margin: 100px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#contact {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 12%;
+    
+}
+.localisation_contact_div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 100px 0;
+    height: 80vh;
+}
+.localisation {
+    width: 49%;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+.localisation iframe {
+    width: 100%;
+    border-radius: 6px;
+}
+
+.localisation_contact_div .form_contact {
+    width: 49%;
+    height: 100%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    padding: 15px;
+    border-radius: 6px;
+}
+.localisation_contact_div h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+.localisation_contact_div .form_contact form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.menu_toggle {
+    display: none;
+}
+
+.bloc-social-media {
+    background: #f4f4f4;
+	display: flex;
+    justify-content: center;
+}
+.chem {
+    background: #f4f4f4;
+	display: flex;
+    justify-content: center;
+}
+
+.bloc-social-media .media-content {
+    min-height: 76px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.media-content img {
+  width: 50px;
+  height: 50px;
+  margin: 0 10px;
+  margin-right: 40px
+}
+.medias img {
+  width: 30px;
+  height: 30px;
+  margin: 0 10px;
+  margin-right: 40px
+}
+footer {
+	background-color: #383838;
+	color: #fff;
+	font-size: 14px;
+	padding: 40px 0;
+}
+
+.container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 1200px;
+	margin: 0 auto;	
+}
+
+.info {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+	display:inline;
+}
+
+.email1 button{
+    font: bold 13px/17px Arial,Helvetica,sans-serif;
+    color: #fff;
+    background: #E03E52;
+    padding: 0;
+    text-shadow: 1px 1px rgba(0,0,0,0.24);
+    border-radius: 6px;
+
+}
+
+
+.info img{
+  width: 30px;
+  height: 30px;
+  margin: 0 10px;
+  margin-right: 40px
+}
+
+.footer-bottom {
+  background-color: #000;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+ </style>
+ 
+<script type="text/javascript" >
+function validateEmail() {
+  var email = document.getElementById("email").value;
+  var regex = /^\S+@\S+\.\S+$/;
+  if (!regex.test(email)) {
+    alert("Adresse e-mail non valide");
+    return false;
+  }
+  return true;
+}
+</script>
+</head>
+<body>
+    <header>
+		<div>
+			<marquee>     
+				<h1><font color="#E03E52">PARFUMERIE MASMOUDI</font></h1>
+				<p id="datetime"></p>
+				<script>
+					var dt = new Date();
+					document.getElementById("datetime").innerHTML = dt.toLocaleString();
+				</script>
+			</marquee>
+		</div>
+        <div class="menu_toggle">
+            <span></span>
+        </div>
+		<div class="logo">
+			<img src="lo.png" alt=" WE CAN logo">
+		</div>
+        <div class="logo">
+            <p><span>Parfumerie </span>Masmoudi</p>
+        </div>
+		
+        <ul class="menu">
+            <li><a href="#home">Acceuil</a></li>
+            <li><a href="#cars">Vehicules</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="login_btn">LOGIN</button>
+    </header>
+    <section id="home">
+        <div class="left">
+            <h1>Buy <span>Your Car</span> Cheaper From Us</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit doloremque earum, totam laudantium dolor voluptatum fugiat. Odio doloribus nostrum harum corporis. Natus omnis deleniti reiciendis illum maxime necessitatibus accusantium esse.</p>
+            <a href="#">BUY NOW</a>
+        </div>
+        <div class="right">
+            <img src="img1.png">
+        </div>
+    </section>
+    <section id="cars">
+        <h1 class="section_title">Nos vehicules</h1>
+        <div class="images">
+            <ul>
+                <li class="car">
+                   <div>
+                       <img src="car1.jpg" alt="">
+                   </div>
+                   <span>LAMBORGHINI</span>
+                   <span class="prix">300.000$</span>
+                   <a href="#">ACHETER MAINTENANT</a>
+                </li>
+                <li class="car">
+                    <div>
+                        <img src="car2.jpg" alt="">
+                    </div>
+                    <span>LAMBORGHINI</span>
+                    <span class="prix">300.000$</span>
+                    <a href="#">ACHETER MAINTENANT</a>
+                 </li>
+                 <li class="car">
+                    <div>
+                        <img src="car3.jpg" alt="">
+                    </div>
+                    <span>LAMBORGHINI</span>
+                    <span class="prix">300.000$</span>
+                    <a href="#">ACHETER MAINTENANT</a>
+                 </li>
+                 <li class="car">
+                    <div>
+                        <img src="car4.jpg" alt="">
+                    </div>
+                    <span>LAMBORGHINI</span>
+                    <span class="prix">300.000$</span>
+                    <a href="#">ACHETER MAINTENANT</a>
+                 </li>
+                 <li class="car">
+                    <div>
+                        <img src="car5.jpg" alt="">
+                    </div>
+                    <span>LAMBORGHINI</span>
+                    <span class="prix">300.000$</span>
+                    <a href="#">ACHETER MAINTENANT</a>
+                 </li>
+                 <li class="car">
+                    <div>
+                        <img src="car6.jpg" alt="">
+                    </div>
+                    <span>LAMBORGHINI</span>
+                    <span class="prix">300.000$</span>
+                    <a href="#">ACHETER MAINTENANT</a>
+                 </li>
+            </ul>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="localisation_contact_div">
+            <div class="localisation">
+                <h3>Notre Adresse</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10499.966567606692!2d2.285747998068967!3d48.85836977022069!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2964e34e2d%3A0x8ddca9ee380ef7e0!2sTour%20Eiffel!5e0!3m2!1sfr!2sfr!4v1644955637071!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+    
+        </div>
+    </section>
+	<div class="chem">
+		<img=src="ba.jpg" alt="ba">
+		<a href="#"> 
+			<marquee> <font color="red"><blink> PARFUMERIE MASMOUDI- 15/04/2023</blink></font> </marquee>
+		</a>
+		
+	</div>
+	<div class="bloc-social-media">
+		<div class="media-content ">
+			<a href="https://www.facebook.com/profile.php?id=100064772497171">
+				<img src="facebook.png" alt="facebook">
+			</a>
+			<a href="https://www.instagram.com/parfumerie_masmoudi/">
+				<img src="instagram.png" alt="instagram">
+			</a>
+			<a href="https://www.youtube.com/channel/UC5JNl3RcA-5QTYr5U4NJrOw">
+				<img src="social.png" alt="youtube">
+			</a>			
+			<a href="https://www.google.com/maps/place/Parfumerie+Masmoudi-%D8%B9%D8%B7%D9%88%D8%B1%D8%A7%D8%AA+%D8%A7%D9%84%D9%85%D8%B5%D9%85%D9%88%D8%AF%D9%8A%E2%80%AD/@34.7314742,10.7605539,17z/data=!3m1!4b1!4m21!1m14!1m10!4m9!1m4!2m2!1d10.3077045!2d36.7435919!4e1!1m3!2m2!1d10.7638335!2d34.7304769!2m2!3m1!5e2!3m5!1s0x13002de488a9676d:0x7a85a02b247634ab!8m2!3d34.7314742!4d10.7627426!16s%2Fg%2F11ss7xlcqs">
+				<img src="pointeur-de-localisation.png" alt="position">
+			</a>
+		</div>
+	</div>
+
+</body>
+<footer>
+	<div class="footer container">
+		<div class="footer info">
+			<img src="espace-reserve-a-la-carte.png">
+			  <h4>Siège social</h4>
+			  <p> Rue Patrice Lumumba n°45 3000 <br>Sfax, Tunisie</p>
+			  <h4>Bureaux</h4>
+			  <p>Immeuble el manar , Rue Patrice Lumumba n°45 3000<br>Sfax, Tunisie</p>
+			<img src="appel-telephonique.png">
+			  <p>+216 52 737 777</a> </p>
+			<img src="email.png">
+			  <br><a href="mailto:parfumerir.masmoudi2023@gmail.com">parfumerie.masmoudi2023@gmail.com</a>
+		</div>
+		<div class="footer links">
+		  <h4>Liens utiles</h4>
+		  <ul>
+			<li><a href=" href="https://www.google.com/maps/place/Parfumerie+Masmoudi-%D8%B9%D8%B7%D9%88%D8%B1%D8%A7%D8%AA+%D8%A7%D9%84%D9%85%D8%B5%D9%85%D9%88%D8%AF%D9%8A%E2%80%AD/@34.7314742,10.7605539,17z/data=!3m1!4b1!4m21!1m14!1m10!4m9!1m4!2m2!1d10.3077045!2d36.7435919!4e1!1m3!2m2!1d10.7638335!2d34.7304769!2m2!3m1!5e2!3m5!1s0x13002de488a9676d:0x7a85a02b247634ab!8m2!3d34.7314742!4d10.7627426!16s%2Fg%2F11ss7xlcqs">Nos magasins</a></li>
+			<li><a href="#">Contactez-nous</a></li>
+			<li><a href="#">Conditions générales de vente</a></li>
+			<li><a href="#">Mentions légales</a></li>
+			<li><a href="#">À propos de Parfumerie Masmoudi</a></li>
+		  </ul>
+		</div>
+		<div class="footer email1">
+		  <h4>Newsletter</h4>
+		  <p>Comptez parmi les premiers informés de nos offres spéciales et évènements Parfumerie Masmoudi</p>
+		  <form action="#" method="post">
+			<label for="email-input">Adresse e-mail:</label>
+			<input type="email" id="email-input" name="email" required>
+			<button type="submit">S'inscrire</button>
+		  </form>
+		  <h4>Suivez-nous</h4>
+				<div class="medias ">
+				<a href="https://www.facebook.com/profile.php?id=100064772497171">
+					<img src="facebook.png" alt="facebook">
+				</a>
+				<a href="https://www.instagram.com/parfumerie_masmoudi/">
+					<img src="instagram.png" alt="instagram">
+				</a>
+				<a href="https://www.youtube.com/channel/UC5JNl3RcA-5QTYr5U4NJrOw">
+					<img src="social.png" alt="youtube">
+				</a>			
+				<a href="https://www.google.com/maps/place/Parfumerie+Masmoudi-%D8%B9%D8%B7%D9%88%D8%B1%D8%A7%D8%AA+%D8%A7%D9%84%D9%85%D8%B5%D9%85%D9%88%D8%AF%D9%8A%E2%80%AD/@34.7314742,10.7605539,17z/data=!3m1!4b1!4m21!1m14!1m10!4m9!1m4!2m2!1d10.3077045!2d36.7435919!4e1!1m3!2m2!1d10.7638335!2d34.7304769!2m2!3m1!5e2!3m5!1s0x13002de488a9676d:0x7a85a02b247634ab!8m2!3d34.7314742!4d10.7627426!16s%2Fg%2F11ss7xlcqs">
+					<img src="pointeur-de-localisation.png" alt="position">
+				</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+</footer>
+	<div class="footer-bottom">
+    <div class="container">
+		<div class="left">
+			<h2>&copy; PARFUMERIE MASMOUDI . Tous les droits sont réservés.</h2>
+		</div>
+		<div class="right">
+			<h2>Site web développé par BAKALI SADEK ZOUAOUI</h2>
+		</div>
+    </div>
+	</div>
+</html>

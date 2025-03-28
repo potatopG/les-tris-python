@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Formulaire d'inscription</title>
+    <style>
+      /* Style CSS pour le formulaire */
+      form {
+        max-width: 500px;
+        margin: 0 auto;
+        font-family: Arial, sans-serif;
+      }
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      input[type="text"],
+      input[type="email"],
+      input[type="tel"],
+      select {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        float: right;
+      }
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+      .error {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="inscription-form" method="post">
+      <label for="nom">Nom :</label>
+      <input type="text" id="nom" name="nom" required>
+      <label for="prenom">Prénom :</label>
+      <input type="text" id="prenom" name="prenom" required>
+      <label for="age">Âge :</label>
+      <input type="number" id="age" name="age" min="18" required>
+      <label for="telephone">Téléphone :</label>
+      <input type="tel" id="telephone" name="telephone" required>
+      <label for="email">Adresse e-mail :</label>
+      <input type="email" id="email" name="email" required>
+      <label for="region">Région :</label>
+      <select id="region" name="region" required>
+        <option value="">Sélectionner une région</option>
+        <option value="Mahdia">Mahdia</option>
+        <option value="Sfax">Sfax</option>
+        <option value="Tunis">Tunis</option>
+      </select>
+      <label for="ville">Ville :</label>
+      <input type="text" id="ville" name="ville" required>
+      <input type="submit" value="Confirmer">
+    </form>
+	<script>
+	function validateForm() {
+  var name = document.forms["myForm"]["name"].value;
+  var age = document.forms["myForm"]["age"].value;
+  var phone = document.forms["myForm"]["phone"].value;
+  var email = document.forms["myForm"]["email"].value;
+  var region = document.forms["myForm"]["region"].value;
+  var city = document.forms["myForm"]["city"].value;
+
+  if (name == "" || age == "" || phone == "" || email == "" || region == "" || city == "") {
+    alert("Veuillez remplir tous les champs");
+    return false;
+  }
+  
+  if (isNaN(age) || age < 0 || age > 120) {
+    alert("L'âge doit être un nombre entre 0 et 120");
+    return false;
+  }
+  
+  if (!/^[0-9]{8}$/.test(phone)) {
+    alert("Le numéro de téléphone doit être composé de 8 chiffres");
+    return false;
+  }
+  
+  if (!/\S+@\S+\.\S+/.test(email)) {
+    alert("L'adresse email n'est pas valide");
+    return false;
+  }
+
+  return true;
+}
+</script>
+</html>
